@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+  </head>
+<body class="dm-sans-myfont">
+    <div class="container-fluid" id="dm-sans-myfont">
+        <div class="row justify-content-center">
+              <div class="col-lg-12 text-center p-0">
+                <img src="Layer_1.jpg" class="ptagss pt-2" alt="image_description">
+                <div class="card pt-3" >
+                    <h2 id="heading">Event Details Form</h2>
+                    <p class="ptag">Fill all form fields to complete the form</p>
+                    <form  name="form-data"  id="msform">
+                      <!-- progressbar -->
+                      <ul id="progressbar">
+                          <li class="active"><strong>1</strong></li>
+                          <li id="address"><strong>2</strong></li>
+                        </ul>
+                      <div class="progress">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br> <!-- fieldsets -->
+                      <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7" id="cp">
+                                    <h2 class="fs-title">Contact Details</h2>
+                                    <p>Personal Details</p>
+                                </div>
+                            </div> 
+                            <label class="fieldlabels">Name</label> 
+                            <input type="text" name="name" placeholder="Name"  class="icon-input" style="background-image: url('name.jpg');"> 
+                    
+                            <label class="fieldlabels">Age</label> 
+                            <input type="number" name="age" placeholder="Age" /> 
+                    
+                            <label class="fieldlabels">Gender</label> 
+                            <select name="gender">
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <label class="fieldlabels">Mobile Number</label> 
+                            <input type="text" name="mobile" placeholder="Mobile Number" class="icon-input" style="background-image: url('mobile.jpg')">
+                    
+                            <h2 class="fs-title">Address:</h2>
+                            <label class="fieldlabels">Address Line 1</label> 
+                            <input type="text" name="address1" placeholder="Address Line 1" /> 
+                            <label class="fieldlabels">Address Line 2</label> 
+                            <input type="text" name="address2" placeholder="Address Line 2" /> 
+                            <label class="fieldlabels">Pincode</label> 
+                            <input type="number" name="pincode" placeholder="Pincode" /> 
+                            <label class="fieldlabels">City</label> 
+                            <input type="text" name="city" placeholder="City" /> 
+                            <label class="fieldlabels">State</label> 
+                            <input type="text" name="state" placeholder="State" /> 
+                            <label class="fieldlabels">Country</label> 
+                            <input type="text" name="country" placeholder="Country" />
+                        </div> 
+                        <div class="btns-d d-flex align-items-center justify-content-center mt-4"> 
+                           <input type="button" name="next" class="next action-button" value="Next" />
+                        </div>   
+                    </fieldset>
+                      <!-- Location And Timmings  -->
+
+                      <fieldset>
+                        <div class="form-card">
+                          <div class="row">
+                            <div class="col-7">
+                              <h2 class="fs-title">Event Details:</h2>
+                            </div>
+                          </div>
+                          <label class="fieldlabels">Select Event Location:</label>
+                          <select name="eventLocation">
+                            <option value="">Select Event Location</option>
+                            <option value="Location 1">Location 1</option>
+                            <option value="Location 2">Location 2</option>
+                          </select>
+                         
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="checkbox-container">
+                                <input type="checkbox" name="eventTimings" value="8:00 AM" id="8am">
+                              </div>
+                              <div class="time-container">
+                                <span>8:00 AM</span>
+                              </div>
+                              <div class="checkbox-container">
+                                <input type="checkbox" name="eventTimings" value="9:00 AM" id="9am">
+                              </div>
+                              <div class="time-container">
+                                <span>9:00 AM</span>
+                              </div>
+                              <div class="checkbox-container">
+                                <input type="checkbox" name="eventTimings" value="10:00 AM" id="10am">
+                              </div>
+                              <div class="time-container">
+                                <span>10:00 AM</span>
+                              </div>
+                            </div>
+                          </div>
+                          <label class="fieldlabels">Number of Attendees:</label>
+                          <input type="number" name="attendees" placeholder="Enter number of attendees" class="icon-input" style="background-image: url('attendees.jpg')" max="6">                          <h2 class="fs-title">Members Attending the Event:</h2>
+                          <div class="row row-form">
+                            <!-- <div class="fileds-in-row"></div> -->
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                              <label class="fieldlabels">Name</label>
+                              <input type="text" name="memberName[]" placeholder="Member 1" class="icon-input" style="background-image: url('.jpg')">
+                              <label class="fieldlabels">Religion</label>
+                              <select name="memberReligion[]" class="mb-3">
+                                <option value="">Select Religion</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Sikh">Sikh</option>
+                                <option value="Christian">Christian</option>
+                              </select>
+                              <label class="fieldlabels">Upload Image</label>
+                              <input type="file" name="memberImage[]" accept="image/*">
+                              <label class="fieldlabels">Upload Identity Card</label>
+                              <input type="file" name="memberIdentityCard[]" accept="image/*">
+                              <label class="fieldlabels">Mobile Number</label>
+                              <input type="number" name="memberMobileNumber[]" placeholder="Enter Mobile Number">
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                              <label class="fieldlabels">Name</label>
+                              <input type="text" name="memberName[]" placeholder="Member 2" class="icon-input" style="background-image: url('.jpg')">
+                              <label class="fieldlabels">Religion</label>
+                              <select name="memberReligion[]" class="mb-3">
+                                <option value="" class="opt">Select Religion</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Sikh">Sikh</option>
+                                <option value="Christian">Christian</option>
+                              </select>
+                              <label class="fieldlabels">Upload Image</label>
+                              <input type="file" name="memberImage[]" accept="image/*">
+                              <label class="fieldlabels">Upload Identity Card</label>
+                              <input type="file" name="memberIdentityCard[]" accept="image/*">
+                              <label class="fieldlabels">Mobile Number</label>
+                              <input type="number" name="memberMobileNumber[]" placeholder="Enter Mobile Number">
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                              <label class="fieldlabels">Name</label>
+                              <input type="text" name="memberName[]" placeholder="Member 3" class="icon-input" style="background-image: url('.jpg')">
+                              <label class="fieldlabels">Religion</label>
+                              <select name="memberReligion[]" class="mb-3">
+                                <option value="" class="opt">Select Religion</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Sikh">Sikh</option>
+                                <option value="Christian">Christian</option>
+                              </select>
+                              <label class="fieldlabels">Upload Image</label>
+                              <input type="file" name="memberImage[]" accept="image/*">
+                              <label class="fieldlabels">Upload Identity Card</label>
+                              <input type="file" name="memberIdentityCard[]" accept="image/*">
+                              <label class="fieldlabels">Mobile Number</label>
+                              <input type="number" name="memberMobileNumber[]" placeholder="Enter Mobile Number">
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                              <label class="fieldlabels">Name</label>
+                              <input type="text" name="memberName[]" placeholder="Member 4" class="icon-input" style="background-image: url('.jpg')">
+                              <label class="fieldlabels">Religion</label>
+                              <select name="memberReligion[]" class="mb-3">
+                                <option value="" class="opt">Select Religion</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Sikh">Sikh</option>
+                                <option value="Christian">Christian</option>
+                              </select>
+                              <label class="fieldlabels">Upload Image</label>
+                              <input type="file" name="memberImage[]" accept="image/*">
+                              <label class="fieldlabels">Upload Identity Card</label>
+                              <input type="file" name="memberIdentityCard[]" accept="image/*">
+                              <label class="fieldlabels">Mobile Number</label>
+                              <input type="number" name="memberMobileNumber[]" placeholder="Enter Mobile Number">
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                              <label class="fieldlabels">Name</label>
+                              <input type="text" name="memberName[]" placeholder="Member 5" class="icon-input" style="background-image: url('.jpg')">
+                              <label class="fieldlabels">Religion</label>
+                              <select name="memberReligion[]" class="mb-3">
+                                <option value="" class="opt">Select Religion</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Sikh">Sikh</option>
+                                <option value="Christian">Christian</option>
+                              </select>
+                              <label class="fieldlabels">Upload Image</label>
+                              <input type="file" name="memberImage[]" accept="image/*">
+                              <label class="fieldlabels">Upload Identity Card</label>
+                              <input type="file" name="memberIdentityCard[]" accept="image/*">
+                              <label class="fieldlabels">Mobile Number</label>
+                              <input type="number" name="memberMobileNumber[]" placeholder="Enter Mobile Number">
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                              <label class="fieldlabels">Name</label>
+                              <input type="text" name="memberName[]" placeholder="Member 6" class="icon-input" style="background-image: url('.jpg')">
+                              <label class="fieldlabels">Religion</label>
+                              <select name="memberReligion[]" class="mb-3">
+                                <option value="" class="opt">Select Religion</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Sikh">Sikh</option>
+                                <option value="Christian">Christian</option>
+                              </select>
+                              <label class="fieldlabels">Upload Image</label>
+                              <input type="file" name="memberImage[]" accept="image/*">
+                              <label class="fieldlabels">Upload Identity Card</label>
+                              <input type="file" name="memberIdentityCard[]" accept="image/*">
+                              <label class="fieldlabels">Mobile Number</label>
+                              <input type="number" name="memberMobileNumber[]" placeholder="Enter Mobile Number">
+                            </div>
+                          </div>
+                          <div class="btns-d d-flex align-items-center justify-content-evenly"> 
+                            <input type="button" name="previous" class="previous action-button-previous action-btnssss" value="Previous" />
+                            <input type="submit" name="submit" class="next action-button action-btnssss" id="msform" value="Submit" />
+                          </div>
+                        </div>
+                      </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
